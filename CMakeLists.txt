@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(sosl_stonefish_scenrios)
+project(world_of_stonefish)
 
 
 find_package(catkin REQUIRED COMPONENTS

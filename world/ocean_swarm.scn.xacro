@@ -10,8 +10,8 @@
 -->
 <scenario xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:include filename="$(find alpha_swarm_stonefish)/description/alpha_leader.scn.xacro"/>
-    <xacro:include filename="$(find alpha_swarm_stonefish)/description/alpha_follower.scn.xacro"/>
+    <xacro:include filename="$(find world_of_stonefish)/vehicles/alpha_leader.scn.xacro"/>
+    <xacro:include filename="$(find world_of_stonefish)/vehicles/alpha_follower.scn.xacro"/>
 
     <xacro:alpha_leader robot_name="leader" xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
     <xacro:alpha_follower robot_name="follower" xyz="-20.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -33,11 +33,11 @@
 
     <static name="Bottom" type="model">
         <physical>
-            <mesh filename="seabed.obj" scale="2.0" convex="false"/>
+            <mesh filename="objects/seabed.obj" scale="2.0" convex="false"/>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         </physical>
         <visual>
-            <mesh filename="seabed.obj" scale="2.0"/>
+            <mesh filename="objects/seabed.obj" scale="2.0"/>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         </visual>
         <material name="Rock"/>

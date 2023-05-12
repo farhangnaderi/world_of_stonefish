@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>sosl_stonefish_scenrios</name>
+  <name>world_of_stonefish</name>
   <version>0.0.0</version>
-  <description>The sosl_stonefish_scenrios package</description>
+  <description>The world_of_stonefish package</description>
 
   <maintainer email="emircem@uri.edu">Emir Cem Gezer</maintainer>
   <author email="emircem@uri.edu">Emir Cem Gezer</author>

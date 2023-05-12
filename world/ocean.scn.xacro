@@ -12,7 +12,7 @@
 
     <xacro:arg name="robot_name" default="changeme"/>
 
-    <xacro:include filename="$(find alpha_std_stonefish)/description/alpha_std.scn.xacro"/>
+    <xacro:include filename="$(find world_of_stonefish)/vehicles/alpha_std.scn.xacro"/>
 
     <xacro:alpha_std robot_name="$(arg robot_name)" xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 
@@ -38,11 +38,11 @@
 
     <static name="Bottom" type="model">
         <physical>
-            <mesh filename="flat_terrain.obj" scale="2.0" convex="true"/>
+            <mesh filename="objects/flat_terrain.obj" scale="2.0" convex="true"/>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         </physical>
         <visual>
-            <mesh filename="flat_terrain.obj" scale="2.0"/>
+            <mesh filename="objects/flat_terrain.obj" scale="2.0"/>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         </visual>
         <material name="Rock"/>
