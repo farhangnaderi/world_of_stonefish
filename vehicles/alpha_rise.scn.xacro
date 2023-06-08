@@ -12,17 +12,16 @@
     <xacro:include filename="$(find world_of_stonefish)/metadata/materials.scn.xacro"/>
 
     <xacro:macro name="alpha_rise" params="xyz rpy robot_name">
-        <robot name="${robot_name}" fixed="false" self_collisions="false">
 
-           
+        <robot name="${robot_name}" fixed="false" self_collisions="false">
             <base_link name="Vehicle" type="compound" physics="submerged">
                 <external_part name="Hull" type="model" physics="submerged" buoyant="false">
                     <physical>
-                        <mesh filename="parts/body/hull_phy_reduced.obj" scale="1.0"/>
+                        <mesh filename="parts/body/hull_mk2_reduced.obj" scale="0.001"/>
                         <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
                     </physical>
                     <visual>
-                        <mesh filename="parts/body/hull.obj" scale="1.0"/>
+                        <mesh filename="parts/body/hull_mk2_visual.obj" scale="0.001"/>
                         <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
                     </visual>
                     <material name="Vehicle"/>
@@ -213,7 +212,7 @@
             </sensor> -->
 
             <world_transform rpy="${rpy}" xyz="${xyz}"/>
-
+            <!-- <world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> -->
         </robot>
     </xacro:macro>
 
