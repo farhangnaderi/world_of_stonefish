@@ -139,12 +139,12 @@
                 </propeller>
                 <ros_subscriber topic="/${robot_name}/control/thruster/surge"/>
             </actuator>
-
+<!-- 
             <actuator name="Rudder" type="rudder">
-                <link name="Base"/>
+                <link name="Base"/> -->
                 <!-- a manual angle -->
                 <!-- <origin rpy="0.0 0.0 0.2" xyz="0.0 0.0 0.0"/>  -->
-                <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/> 
+                <!-- <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/> 
                 <specs drag_coeff="1.0" lift_coeff="3.0" max_angle="0.6" inverted="false" area="0.06"/>
                 <visual>
                     <mesh filename="parts/others/rudder.obj" scale="0.002"/>
@@ -152,7 +152,7 @@
                     <look name="black"/>
                     <origin rpy="-1.571 1.571 0.3" xyz="-1.2 0.0 0.2"/>
                 </visual>
-            </actuator>
+            </actuator> -->
 
             <sensor name="pressure" type="pressure" rate="5.0">
                 <link name="Base"/>
@@ -215,6 +215,15 @@
                 <ros_publisher topic="/${robot_name}/msis/data"/>
             </sensor> -->
 
+            <sensor name="MSIS" type="msis">
+                <specs step="1" bins="100" horizontal_beam_width="2.0" vertical_beam_width="30.0"/>
+                <settings range_min="0.5" range_max="50.0" rotation_min="-180.0" rotation_max="180.0" gain="1.5"/>
+                <noise multiplicative="0.02" additive="0.03"/>
+                <display colormap="hot"/>
+                <origin xyz="0.0 0.0 0.0" rpy="-1.57 3.14 4.71"/>
+                <ros_publisher topic="/${robot_name}/msis/stonefish/data"/>
+                <link name="Base"/>
+            </sensor>
 
 
             <!-- <sensor name="FLS" type="fls">
