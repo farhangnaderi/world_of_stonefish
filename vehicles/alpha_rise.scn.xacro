@@ -102,7 +102,7 @@
 
             <actuator name="ThrusterHeaveStern" type="thruster">
                 <link name="Base"/>
-                <origin rpy="0.0 -1.571 0.0" xyz="-1.13 0.0 0.0"/>
+                <origin rpy="0.0 1.571 0.0" xyz="-1.13 0.0 0.0"/>
                 <specs thrust_coeff="0.4315" thrust_coeff_backward="0.3404" torque_coeff="0.01" max_rpm="3000.0"/>
                 <propeller diameter="0.08" right="true">
                     <mesh filename="parts/thruster/prop.obj" scale="1.0"/>
@@ -115,7 +115,7 @@
 
             <actuator name="ThrusterHeaveBow" type="thruster">
                 <link name="Base"/>
-                <origin rpy="0.0 -1.571 0.0" xyz="-0.3545 0.0 0.0"/>
+                <origin rpy="0.0 1.571 0.0" xyz="-0.3545 0.0 0.0"/>
                 <specs thrust_coeff="0.4315" thrust_coeff_backward="0.3404" torque_coeff="0.01" max_rpm="3000.0"/>
                 <propeller diameter="0.08" right="true">
                     <mesh filename="parts/thruster/prop.obj" scale="1.0"/>
@@ -141,6 +141,9 @@
             </actuator>
 <!-- 
             <actuator name="Rudder" type="rudder">
+                <link name="Base"/> -->
+
+            <!-- <actuator name="Rudder" type="rudder">
                 <link name="Base"/> -->
                 <!-- a manual angle -->
                 <!-- <origin rpy="0.0 0.0 0.2" xyz="0.0 0.0 0.0"/>  -->
