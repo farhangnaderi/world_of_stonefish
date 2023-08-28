@@ -10,7 +10,6 @@
 
     <xacro:include filename="$(find world_of_stonefish)/metadata/looks.scn.xacro"/>
     <xacro:include filename="$(find world_of_stonefish)/metadata/materials.scn.xacro"/>
-    <xacro:include filename="$(find world_of_stonefish)/world/ocean_rise.scn.xacro"/>
 
     <static name="iceberg" type="model">
         <physical>

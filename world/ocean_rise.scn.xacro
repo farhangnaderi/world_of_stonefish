@@ -11,6 +11,7 @@
 <scenario xmlns:xacro="http://ros.org/wiki/xacro">
 
     <xacro:arg name="robot_name" default="changeme"/>
+    <xacro:include filename="$(find world_of_stonefish)/world/iceberg.scn.xacro"/>
     <xacro:include filename="$(find world_of_stonefish)/vehicles/alpha_rise.scn.xacro"/>
     <xacro:include filename="$(find world_of_stonefish)/vehicles/wamv.scn.xacro"/>
 
