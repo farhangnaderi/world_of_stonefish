@@ -223,7 +223,8 @@
                 <settings range_min="0.5" range_max="50.0" rotation_min="-180.0" rotation_max="180.0" gain="1.5"/>
                 <noise multiplicative="0.002" additive="0.003"/>
                 <display colormap="hot"/>
-                <origin xyz="0.0 0.0 0.0" rpy="-1.57 3.14 4.71"/>
+                <origin xyz="0.0 0.0 0.0" rpy="1.57 0 0"/>
+                <!-- <origin xyz="0.0 0.0 0.0" rpy="1.57 3.14 4.71"/> -->
                 <ros_publisher topic="/${robot_name}/msis/stonefish/data"/>
                 <link name="Base"/>
             </sensor>
