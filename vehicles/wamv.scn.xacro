@@ -211,7 +211,7 @@
                 <ros_publisher topic="/${robot_name}/gps/fix"/>
             </sensor>
 
-            <sensor name="MSIS" type="msis">
+            <!-- <sensor name="MSIS" type="msis">
                 <specs step="1" bins="100" horizontal_beam_width="2.0" vertical_beam_width="30.0"/>
                 <settings range_min="0.5" range_max="50.0" rotation_min="-50.0" rotation_max="50.0" gain="1.5"/>
                 <noise multiplicative="0.02" additive="0.03"/>
@@ -219,7 +219,7 @@
                 <origin xyz="0.0 0.0 0.0" rpy="-1.57 3.14 4.71"/>
                 <ros_publisher topic="/${robot_name}/msis/stonefish/data"/>
                 <link name="Base"/>
-            </sensor>
+            </sensor> -->
 
             <sensor name="Cam" rate="10.0" type="camera">
                 <specs resolution_x="800" resolution_y="600" horizontal_fov="60.0"/>
