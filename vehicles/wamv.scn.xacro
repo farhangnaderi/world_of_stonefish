@@ -65,7 +65,7 @@
                     <cg xyz=" 0.0 0 1.0" rpy="0.0 0.0 0.0"/>
                 </external_part>
 
-                <external_part name="thrusterPort" type="model" physics="submerged" buoyant="false">
+                <!-- <external_part name="thrusterPort" type="model" physics="submerged" buoyant="false">
                     <physical>
                         <mesh filename="$(find world_of_stonefish)/data/parts/thruster/wamv_propeller.obj" scale="0.5"/>
                         <origin rpy="0.0 0 0.0" xyz="-1.1 -.45 0.08"/>
@@ -91,7 +91,7 @@
                     <material name="Neutral"/>
                     <look name="black"/>
                     <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-                </external_part>
+                </external_part> -->
             </base_link>
 
             <!-- the actual base frame  -->
@@ -116,7 +116,7 @@
                 <propeller diameter="0.08" right="true">
                     <mesh filename="$(find world_of_stonefish)/data/parts/thruster/wamv_propeller.obj" scale="0.5"/>
                     <material name="Neutral"/>
-                    <look name="white"/>
+                    <look name="black"/>
                 </propeller>
                 <ros_subscriber topic="/${robot_name}/control/thruster/port"/>
             </actuator>
@@ -128,7 +128,7 @@
                 <propeller diameter="0.08" right="true">
                     <mesh filename="$(find world_of_stonefish)/data/parts/thruster/wamv_propeller.obj" scale="0.5"/>
                     <material name="Neutral"/>
-                    <look name="white"/>
+                    <look name="black"/>
                 </propeller>
                 <ros_subscriber topic="/${robot_name}/control/thruster/starboard"/>
             </actuator>
@@ -222,10 +222,17 @@
             </sensor> -->
 
             <sensor name="Cam" rate="10.0" type="camera">
-                <specs resolution_x="800" resolution_y="600" horizontal_fov="60.0"/>
-                <origin xyz="0.0 0.0 -0.3" rpy="-1.57 3.14 4.71"/>
+                <specs resolution_x="800" resolution_y="600" horizontal_fov="120.0"/>
+                <origin xyz="0.0 0.0 -1" rpy="-1.57 3.14 0"/>
                 <link name="Base"/>
-                <ros_publisher topic="/${robot_name}/camera/stonefish/data"/>
+                <ros_publisher topic="/${robot_name}/camera/stonefish/side/data"/>
+            </sensor>
+
+            <sensor name="Cam_front" rate="10.0" type="camera">
+                <specs resolution_x="800" resolution_y="600" horizontal_fov="120.0"/>
+                <origin xyz="-1. 0.0 -1" rpy="-1.57 3.14 4.71"/>
+                <link name="Base"/>
+                <ros_publisher topic="/${robot_name}/camera/stonefish/front/data"/>
             </sensor>
 
             <world_transform rpy="${rpy}" xyz="${xyz}"/>

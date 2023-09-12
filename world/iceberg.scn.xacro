@@ -13,12 +13,12 @@
 
     <static name="iceberg" type="model">
         <physical>
-            <mesh filename="objects/iceberg_01.obj" scale="1.0" convex="false"/>
-            <origin xyz="-20 -15 0.0" rpy="0.0 0.0 0.0"/>
+            <mesh filename="objects/iceberg_01.obj" scale="0.5" convex="false"/>
+            <origin xyz="-40 10 0.0" rpy="0.0 0.0 0.0"/>
         </physical>
         <visual>
-            <mesh filename="objects/iceberg_01.obj" scale="1.0"/>
-            <origin xyz="-20 -15 0.0" rpy="0.0 0.0 0.0"/>
+            <mesh filename="objects/iceberg_01.obj" scale="0.5"/>
+            <origin xyz="-40 10 0.0" rpy="0.0 0.0 0.0"/>
         </visual>
         <material name="Ice"/>
         <look name="ice"/>
