@@ -175,7 +175,7 @@
 
             <sensor name="imu_sf" type="imu" rate="20.0">
                 <link name="Base"/>
-                <origin rpy="0.0 0.0 3.1415926" xyz="-0.65 0.0 -0.05"/>
+                <origin rpy="0.0 0.0 0.0" xyz="-0.65 0.0 -0.05"/>
                 <noise angle="0.0001 0.0001 0.0001" angular_velocity="0.0001" yaw_drift="0.0001" linear_acceleration="0.0001"/>
                 <ros_publisher topic="/${robot_name}/imu/stonefish/data"/>
             </sensor>
