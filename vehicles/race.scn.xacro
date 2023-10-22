@@ -27,16 +27,16 @@
                     <material name="Neutral"/>
                     <look name="yellow"/>
                     <mass value="25.0"/>
-                    <inertia xyz="1.0 10.0 10.0"/>
+                    <!-- <inertia xyz="1.0 10.0 10.0"/> -->
                     <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
                     <cg xyz="-0.456 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 </external_part>
 
                 <internal_part name="Foam" type="box" physics="surface" buoyant="true">
-                    <dimensions xyz="0.8 0.25 0.15"/>
+                    <dimensions xyz="0.8 0.21 0.15"/>
                     <origin rpy="0.0 0.0 0.0" xyz="-0.456 0.0 -0.1"/>
                     <material name="Foam"/>
-                    <mass value="0.1"/>
+                    <mass value="0.15"/>
                     <look name="grey"/>
                     <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
                 </internal_part>
@@ -162,6 +162,19 @@
                 <ros_publisher topic="/${robot_name}/gps/fix"/>
             </sensor>
 
+            <sensor name="Cam" rate="5.0" type="camera">
+                <link name="Base"/>
+                <specs resolution_x="800" resolution_y="600" horizontal_fov="60.0"/>
+                <origin xyz="0.0 0.0 -0.05" rpy="1.571 0.0 1.571"/>
+                <ros_publisher topic="/${robot_name}/camera/data"/>
+                
+            </sensor>
+            <light name="Spot">
+                <link name="Base"/>
+                <specs radius="0.01" cone_angle="120.0" illuminance="20000.0"/>
+                <color temperature="5600.0"/>
+                <origin xyz="0.0 0.0 -0.1" rpy="0.0 1.571 0.0"/>
+            </light>
             <world_transform rpy="${rpy}" xyz="${xyz}"/>
             <!-- <world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> -->
         </robot>

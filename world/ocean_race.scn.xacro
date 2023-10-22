@@ -49,5 +49,20 @@
         <world_transform xyz="0.0 0.0 40.0" rpy="0.0 0.0 0.0"/>
     </static>
 
+    <static name="cage" type="model">
+        <physical>
+            <mesh filename="objects/cage.obj" scale="0.001" convex="false"/>
+            <origin xyz="0 0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <visual>
+            <mesh filename="objects/cage.obj" scale="0.001"/>
+            <origin xyz="0 0 0.0" rpy="0.0 0.0 0.0"/>
+        </visual>
+        <material name="Aluminium"/>
+        <look name="black"/>
+        <cg xyz=" 0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <world_transform xyz="6.0 0.0 2" rpy="3.1415926 0.0 0.0"/>
+    </static>
+
 
 </scenario>
