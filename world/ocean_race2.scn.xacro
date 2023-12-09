@@ -2,23 +2,23 @@
 <!--
     This file is part of ALPHA AUV project.
 
-    Author: Emir Cem Gezer
-    Email: emircem@uri.edu;emircem.gezer@gmail.com
-    Year: 2022
+    Author:Farhang Naderi
+    Email: farhang.naderi@uri.edu,farhang.nba@gmail.com
+    Year: 2023
 
-    Copyright (C) 2022 Smart Ocean Systems Laboratory
+    Copyright (C) 2023 Smart Ocean Systems Laboratory
 -->
 <scenario xmlns:xacro="http://ros.org/wiki/xacro">
 
     <xacro:arg name="robot_name" default="changeme"/>
     <xacro:include filename="$(find world_of_stonefish)/vehicles/$(arg robot_name).scn.xacro"/>
 
-    <xacro:alpha_rise robot_name="$(arg robot_name)" xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <xacro:race2 robot_name="$(arg robot_name)" xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 
     <environment>
         <ned latitude="41" longitude="-71"/>
         <ocean>
-            <water density="1031.0" jerlov="0.2"/>
+            <water density="1025.0" jerlov="0.2"/>
             <!-- <waves height="0.0"/> -->
             <particles enabled="true"/>
             <current type="uniform">
@@ -48,6 +48,5 @@
         <look name="Gray"/>
         <world_transform xyz="0.0 0.0 40.0" rpy="0.0 0.0 0.0"/>
     </static>
-
 
 </scenario>
