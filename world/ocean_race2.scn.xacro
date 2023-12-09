@@ -2,8 +2,8 @@
 <!--
     This file is part of ALPHA AUV project.
 
-    Author: Emir Cem Gezer
-    Email: emircem@uri.edu;emircem.gezer@gmail.com
+    Author:Farhang Naderi
+    Email: farhang.naderi@uri.edu,farhang.nba@gmail.com
     Year: 2023
 
     Copyright (C) 2023 Smart Ocean Systems Laboratory
@@ -18,7 +18,7 @@
     <environment>
         <ned latitude="41" longitude="-71"/>
         <ocean>
-            <water density="1031.0" jerlov="0.2"/>
+            <water density="1025.0" jerlov="0.2"/>
             <!-- <waves height="0.0"/> -->
             <particles enabled="true"/>
             <current type="uniform">
