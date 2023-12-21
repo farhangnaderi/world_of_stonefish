@@ -246,8 +246,8 @@
             
             <world_transform rpy="${rpy}" xyz="${xyz}"/>
             <!-- <world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> -->
-            <ros_publisher servos="/${robot_name}/joint_states" />
-            <ros_subscriber servos="/${robot_name}/joint_desired_states" />
+            <ros_publisher servos="/${robot_name}/control/servos/joint_states" />
+            <ros_subscriber servos="/${robot_name}/control/servos/joint_desired_states" />
         </robot>
     </xacro:macro>
 
