@@ -74,7 +74,7 @@
 
             <actuator name="ThrusterHeaveBow" type="thruster">
                 <link name="Base"/>
-                <origin rpy="0.0 1.571 0.0" xyz="-0.07535 0.0 -0.07535"/>
+                <origin rpy="0.0 -1.571 0.0" xyz="-0.07535 0.0 -0.07535"/>
                 <specs thrust_coeff="0.4472" thrust_coeff_backward="0.3566" torque_coeff="0.01" max_rpm="3000.0"/>
                 <propeller diameter="0.08" right="true">
                     <mesh filename="parts/thruster/prop.obj" scale="1.0"/>
@@ -86,7 +86,7 @@
 
             <actuator name="ThrusterHeaveSternPort" type="thruster">
                 <link name="Base"/>
-                <origin rpy="0.0 1.571 0.0" xyz="-0.56 -0.1034 -0.07535"/>
+                <origin rpy="0.0 -1.571 0.0" xyz="-0.56 -0.1034 -0.07535"/>
                 <specs thrust_coeff="0.4472" thrust_coeff_backward="0.3566" torque_coeff="0.01" max_rpm="3000.0"/>
                 <propeller diameter="0.08" right="true">
                     <mesh filename="parts/thruster/prop.obj" scale="1.0"/>
@@ -98,7 +98,7 @@
 
             <actuator name="ThrusterHeaveSternStbd" type="thruster">
                 <link name="Base"/>
-                <origin rpy="0.0 1.571 0.0" xyz="-0.56 0.1034 -0.07535"/>
+                <origin rpy="0.0 -1.571 0.0" xyz="-0.56 0.1034 -0.07535"/>
                 <specs thrust_coeff="0.4472" thrust_coeff_backward="0.3566" torque_coeff="0.01" max_rpm="3000.0"/>
                 <propeller diameter="0.08" right="true">
                     <mesh filename="parts/thruster/prop.obj" scale="1.0"/>
@@ -162,19 +162,18 @@
                 <ros_publisher topic="/${robot_name}/gps/fix"/>
             </sensor>
 
-            <sensor name="Cam" rate="5.0" type="camera">
+            <!-- <sensor name="Cam" rate="5.0" type="camera">
                 <link name="Base"/>
                 <specs resolution_x="800" resolution_y="600" horizontal_fov="60.0"/>
                 <origin xyz="0.0 0.0 -0.05" rpy="1.571 0.0 1.571"/>
                 <ros_publisher topic="/${robot_name}/camera/data"/>
-                
-            </sensor>
-            <light name="Spot">
+            </sensor> -->
+            <!-- <light name="Spot">
                 <link name="Base"/>
                 <specs radius="0.01" cone_angle="120.0" illuminance="20000.0"/>
                 <color temperature="5600.0"/>
                 <origin xyz="0.0 0.0 -0.1" rpy="0.0 1.571 0.0"/>
-            </light>
+            </light> -->
             <world_transform rpy="${rpy}" xyz="${xyz}"/>
             <!-- <world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> -->
         </robot>

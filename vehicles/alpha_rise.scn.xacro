@@ -26,17 +26,17 @@
                     </visual>
                     <material name="Vehicle"/>
                     <look name="yellow"/>
-                    <mass value="38.7"/>
-                    <inertia xyz="1.0 10.0 10.0"/>
+                    <mass value="30.0"/>
+                    <!-- <inertia xyz="1.0 5.0 5.0"/> -->
                     <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-                    <cg xyz="-0.65 0.0 0.1" rpy="0.0 0.0 0.0"/>
+                    <cg xyz="-0.65 0.0 0.00" rpy="0.0 0.0 0.0"/>
                 </external_part>
 
                 <internal_part name="Foam" type="cylinder" physics="surface" buoyant="true">
-                    <dimensions radius="0.12" height="0.9"/>
+                    <dimensions radius="0.12" height="0.68"/>
                     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
                     <material name="Foam"/>
-                    <mass value="1.5"/>
+                    <mass value="0.1"/>
                     <look name="grey"/>
                     <compound_transform rpy="0.0 1.571 0.0" xyz="-0.65 0.0 -0.1"/>
                 </internal_part>
@@ -103,7 +103,7 @@
             <actuator name="ThrusterHeaveStern" type="thruster">
                 <link name="Base"/>
                 <origin rpy="0.0 1.571 0.0" xyz="-1.13 0.0 0.0"/>
-                <specs thrust_coeff="0.4472" thrust_coeff_backward="0.3566" torque_coeff="0.01" max_rpm="3000.0"/>
+                <specs thrust_coeff="0.4472" thrust_coeff_backward="0.4472" torque_coeff="0.01" max_rpm="3000.0"/>
                 <propeller diameter="0.08" right="true">
                     <mesh filename="parts/thruster/prop.obj" scale="1.0"/>
                     <mesh filename="prop.obj" scale="1.0"/>
@@ -116,7 +116,7 @@
             <actuator name="ThrusterHeaveBow" type="thruster">
                 <link name="Base"/>
                 <origin rpy="0.0 1.571 0.0" xyz="-0.3545 0.0 0.0"/>
-                <specs thrust_coeff="0.4472" thrust_coeff_backward="0.3566" torque_coeff="0.01" max_rpm="3000.0"/>
+                <specs thrust_coeff="0.4472" thrust_coeff_backward="0.4472" torque_coeff="0.01" max_rpm="3000.0"/>
                 <propeller diameter="0.08" right="true">
                     <mesh filename="parts/thruster/prop.obj" scale="1.0"/>
                     <mesh filename="prop.obj" scale="1.0"/>
@@ -218,16 +218,16 @@
                 <ros_publisher topic="/${robot_name}/msis/data"/>
             </sensor> -->
 
-            <sensor name="MSIS" type="msis">
+            <!-- <sensor name="MSIS" type="msis">
                 <specs step="1" bins="100" horizontal_beam_width="2.0" vertical_beam_width="10.0"/>
                 <settings range_min="0.5" range_max="50.0" rotation_min="-180.0" rotation_max="180.0" gain="1.5"/>
                 <noise multiplicative="0.002" additive="0.003"/>
                 <display colormap="hot"/>
-                <origin xyz="0.0 0.0 0.0" rpy="1.57 0 1.57"/>
+                <origin xyz="0.0 0.0 0.0" rpy="1.57 0 1.57"/> -->
                 <!-- <origin xyz="0.0 0.0 0.0" rpy="1.57 3.14 4.71"/> -->
-                <ros_publisher topic="/${robot_name}/msis/stonefish/data"/>
+                <!-- <ros_publisher topic="/${robot_name}/msis/stonefish/data"/>
                 <link name="Base"/>
-            </sensor>
+            </sensor> -->
 
 
             <!-- <sensor name="FLS" type="fls">
