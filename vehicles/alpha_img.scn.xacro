@@ -193,7 +193,7 @@
             </sensor>
 
             <!-- -->
-            <sensor name="imu_sf" type="imu" rate="20.0">
+            <sensor name="imu_sf" type="imu" rate="100.0">
                 <link name="Nose_link"/>
                 <origin rpy="0.0 0.0 0.0" xyz="-0.6867 0.0625 0.0381"/>
                 <noise angle="0.0001 0.0001 0.0001" angular_velocity="0.0001" yaw_drift="0.0001" linear_acceleration="0.0001"/>

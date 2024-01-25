@@ -10,10 +10,6 @@
 -->
 <scenario xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <!-- <xacro:arg name="robot_name" default="changeme"/> -->
-    <!-- <xacro:include filename="$(find world_of_stonefish)/vehicles/alpha_std.scn.xacro"/> -->
-    <!-- <xacro:alpha_std robot_name="$(arg robot_name)" xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> -->
-
     <xacro:arg name="robot_name" default="changeme"/>
     <xacro:include filename="$(find world_of_stonefish)/vehicles/$(arg robot_name).scn.xacro"/>
     <xacro:alpha_img robot_name="$(arg robot_name)" xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -44,7 +40,165 @@
         </visual>
         <material name="Rock"/>
         <look name="Gray"/>
-        <world_transform xyz="0.0 0.0 18.0" rpy="3.1415926 0.0 0.0"/>
+        <world_transform xyz="0.0 0.0 8.0" rpy="3.1415926 0.0 0.0"/>
+    </static>
+
+    <!-- Front Objects -->
+
+    <static name="cube_aluminium_yellow" type="box">
+        <dimensions xyz="0.6 0.6 1.2"/>
+        <material name="Aluminium"/>
+        <look name="yellow"/>
+        <world_transform xyz="-4.1 20.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="cube_aluminium_black" type="box">
+        <dimensions xyz="0.88 0.6 1.2"/>
+        <material name="Aluminium"/>
+        <look name="black"/>
+        <world_transform xyz="7.1 18.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>    
+
+    <static name="cube_aluminium_red" type="box">
+        <dimensions xyz="0.8 0.5 1.8"/>
+        <material name="Aluminium"/>
+        <look name="red"/>
+        <world_transform xyz="-9.0 19.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="cube_aluminium_blue" type="box">
+        <dimensions xyz="0.8 0.9 1.2"/>
+        <material name="Aluminium"/>
+        <look name="blue"/>
+        <world_transform xyz="0.0 13.5 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="cube_aluminium_gray" type="box">
+        <dimensions xyz="0.6 0.6 1.2"/>
+        <material name="Aluminium"/>
+        <look name="gray"/>
+        <world_transform xyz="6.0 9.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_rock_yellow" type="sphere">
+        <dimensions radius="1.2"/>
+        <material name="Rock"/>
+        <look name="yellow"/>
+        <world_transform xyz="3.0 22.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_rock_red" type="sphere">
+        <dimensions radius="0.6"/>
+        <material name="Rock"/>
+        <look name="red"/>
+        <world_transform xyz="-2.1 8.5 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_rock_black" type="sphere">
+        <dimensions radius="0.6"/>
+        <material name="Rock"/>
+        <look name="black"/>
+        <world_transform xyz="-6.8 15.5 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_rock_ice" type="sphere">
+        <dimensions radius="1.0"/>
+        <material name="Rock"/>
+        <look name="ice"/>
+        <world_transform xyz="-7.8 5.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_rock_blue" type="sphere">
+        <dimensions radius="0.8"/>
+        <material name="Rock"/>
+        <look name="blue"/>
+        <world_transform xyz="-1.1 1.5 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_rock_gray" type="sphere">
+        <dimensions radius="0.7"/>
+        <material name="Rock"/>
+        <look name="gray"/>
+        <world_transform xyz="8.5 3.1 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <!-- Back Objects -->
+
+    <static name="cube_rock_yellow" type="box">
+        <dimensions xyz="0.6 0.6 1.2"/>
+        <material name="Rock"/>
+        <look name="yellow"/>
+        <world_transform xyz="4.1 -20.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="cube_rock_black" type="box">
+        <dimensions xyz="0.88 0.6 1.2"/>
+        <material name="Rock"/>
+        <look name="black"/>
+        <world_transform xyz="-7.1 -18.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>    
+
+    <static name="cube_rock_red" type="box">
+        <dimensions xyz="0.8 0.5 1.8"/>
+        <material name="Rock"/>
+        <look name="red"/>
+        <world_transform xyz="9.0 -19.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="cube_rock_blue" type="box">
+        <dimensions xyz="0.8 0.9 1.2"/>
+        <material name="Rock"/>
+        <look name="blue"/>
+        <world_transform xyz="0.0 -13.5 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="cube_rock_gray" type="box">
+        <dimensions xyz="0.6 0.6 1.2"/>
+        <material name="Rock"/>
+        <look name="gray"/>
+        <world_transform xyz="-6.0 -9.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_aluminium_yellow" type="sphere">
+        <dimensions radius="1.2"/>
+        <material name="Aluminium"/>
+        <look name="yellow"/>
+        <world_transform xyz="-3.0 -22.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_aluminium_red" type="sphere">
+        <dimensions radius="0.6"/>
+        <material name="Aluminium"/>
+        <look name="red"/>
+        <world_transform xyz="2.1 -8.5 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_aluminium_black" type="sphere">
+        <dimensions radius="0.6"/>
+        <material name="Aluminium"/>
+        <look name="black"/>
+        <world_transform xyz="6.8 -15.5 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_aluminium_ice" type="sphere">
+        <dimensions radius="1.0"/>
+        <material name="Aluminium"/>
+        <look name="ice"/>
+        <world_transform xyz="7.8 -5.0 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_aluminium_blue" type="sphere">
+        <dimensions radius="0.8"/>
+        <material name="Aluminium"/>
+        <look name="blue"/>
+        <world_transform xyz="1.1 -1.5 6.0" rpy="0.0 0.0 0.0"/>
+    </static>
+
+    <static name="ball_aluminium_gray" type="sphere">
+        <dimensions radius="0.7"/>
+        <material name="Aluminium"/>
+        <look name="gray"/>
+        <world_transform xyz="-8.5 -3.1 6.0" rpy="0.0 0.0 0.0"/>
     </static>
 
 </scenario>
