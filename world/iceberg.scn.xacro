@@ -29,22 +29,34 @@
     <animated name="AnimMesh" type="model" collisions="true">
         <physical>
             <mesh filename="objects/iceberg_01.obj" scale="0.5"/>
-            <origin xyz="-45 20 0.0" rpy="3.1415926 0.0 -3.925"/>
+            <origin xyz="45 45 0.0" rpy="3.1415926 0.0 0"/>
         </physical>
         <visual>
             <mesh filename="objects/iceberg_01.obj" scale="0.5"/>
-            <origin xyz="-45 20 0.0" rpy="3.1415926 0.0 -3.925"/>
+            <origin xyz="45 45 0.0" rpy="3.1415926 0.0 0"/>
         </visual>
         <material name="Ice"/>
         <look name="ice"/>
-        <cg xyz=" 0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <!-- <world_transform xyz="55.0 55.0 0.0" rpy="3.1415926 0.0 0.0"/> -->
         <trajectory type="spline" playback="onetime">
-            <keypoint time="0.0" xyz="-30 45 0.0" rpy="3.1415926 0.0 3.925"/>
-            <keypoint time="10.0" xyz="-30 45 0.0" rpy="3.1415926 0.0 3.925"/>
-            <!-- <keypoint time="70.0" xyz="-35 50.0 0.0" rpy="3 0.0 3.925"/> -->
-            <keypoint time="70.0" xyz="-35 50.0 0.0" rpy="3.143 0.0 3.925"/>
-
+        <!--x = 3 m/min, y= 1.2 m/min roll= 0.03 rad/min.-->
+            <keypoint time="0.0" xyz="45 45 0.0" rpy="3.14 0.0 0"/>
+            <keypoint time="10.0" xyz="45 45 0.0" rpy="3.14 0.0 0"/>
+            <keypoint time="60.0" xyz="48 46.2 0.0" rpy="3.14 0.0 0.03"/>
+            <keypoint time="120.0" xyz="51 47.4 0.0" rpy="3.14 0.0 0.06"/>
+            <keypoint time="180.0" xyz="54 49.6 0.0" rpy="3.14 0.0 0.09"/>
+            <keypoint time="240.0" xyz="57 51.8 0.0" rpy="3.14 0.0 0.12"/>
+            <keypoint time="300.0" xyz="60 53.0 0.0" rpy="3.14 0.0 0.15"/>
+            <keypoint time="360.0" xyz="63 54.2 0.0" rpy="3.14 0.0 0.18"/>
+            <keypoint time="420.0" xyz="66 54.4 0.0" rpy="3.14 0.0 0.21"/>
+            <keypoint time="480.0" xyz="66 55.6 0.0" rpy="3.14 0.0 0.24"/>
+            <keypoint time="540.0" xyz="69 56.8 0.0" rpy="3.14 0.0 0.27"/>
+            <keypoint time="600.0" xyz="72 58 0.0" rpy="3.14 0.0 0.3"/>
+            <keypoint time="660.0" xyz="75 59.2 0.0" rpy="3.14 0.0 0.33"/>
+            <keypoint time="720.0" xyz="78 60.4 0.0" rpy="3.14 0.0 0.36"/>
+            <keypoint time="780.0" xyz="81 61.6 0.0" rpy="3.14 0.0 0.39"/>
+            <keypoint time="840.0" xyz="84 62.8 0.0" rpy="3.14 0.0 0.42"/>
+            <keypoint time="900.0" xyz="87 64 0.0" rpy="3.14 0.0 0.45"/>
+            <keypoint time="960.0" xyz="90 65.2 0.0" rpy="3.14 0.0 0.48"/>
         </trajectory>
     </animated>
 
